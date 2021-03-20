@@ -1,0 +1,24 @@
+table{
+    border:1px solid darkgrey;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.component{
+    border-right:1px solid darkgrey;
+    font-weight: bold;
+}
+#otsikko{
+    border:1px solid darkgrey;
+    letter-spacing: 3px;
+}
+td{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+tr:nth-child(even) {
+    background-color: rgb(240, 240, 240);
+}
+tr:nth-child(2) {
+    background-color: red;
+    color: white;
+}

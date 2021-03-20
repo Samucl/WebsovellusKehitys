@@ -1,0 +1,64 @@
+body{
+    font-family: Arial;
+    padding: 50px;
+    background-color: rgb(50, 50, 50);
+}
+h2{
+    border-left: white solid 3px;
+    padding-left: 10px;
+    color: white;
+}
+img{
+    float: left;
+    height: 100px;
+    box-shadow: 11px 10px 28px -10px rgba(0,0,0,0.62);
+}
+#data{
+    padding: 30px;
+    padding-left: 20px;
+    background-color: rgb(184, 206, 209);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+#intro{
+    padding: 30px;
+    padding-bottom: 20px;
+    background-color: rgb(223, 235, 237);
+}
+#hobbies{
+    padding: 30px;
+    padding-bottom: 20px;
+    background-color: rgb(184, 206, 209);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+#name{
+    letter-spacing: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+h3{
+    letter-spacing: 5px;
+    font-weight: lighter;
+    margin: 0;
+}
+ul{
+    font-style: italic;
+}
+#boxes{
+    box-shadow: 11px 10px 28px -10px rgba(0,0,0,0.62);
+    border-radius: 20px;
+}
+.namendate{
+    margin-left: 140px;
+}
+h3{
+    font-weight: bold;
+}
+li{
+    background-color: rgb(223, 235, 237);
+    width: 110px;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 20px;
+}

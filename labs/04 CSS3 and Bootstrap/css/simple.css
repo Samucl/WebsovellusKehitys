@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, Verdana, sans-serif;
+    background-color: lavender;
+}
+h1, h2 {
+    color: rgba(65,105,225,0.7);
+    font-weight: bold;
+}
+figure{
+    font-size: 0.7em;
+    font-weight: bold;
+}
+h1 {
+    font-size: 4.0em;
+}
+ul, ol {
+    font-size: 0.8em;
+    border:2px solid darkgrey;
+    text-indent: 5em;
+}
+p{
+    text-indent: 5em;
+}
+li{
+    color: darkgrey;
+}
+p.copyright_notice {
+    font-size: 0.8em;
+}
+#basic{
+    font-family: "Lucida Console";
+    text-indent: 0em;
+}
+p::first-letter {
+    font-size:8em;
+}
+
+p::first-line {
+    font-weight: bold;
+}
