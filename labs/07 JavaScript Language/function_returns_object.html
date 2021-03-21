@@ -18,6 +18,8 @@
 		var rand5 = Math.floor(Math.random() * 5);
 		var rand6 = Math.floor(Math.random() * 2);
 
+		var engine = makeEngine();
+
 		var car = {
 			make: makes[rand1],
 			model: models[rand2],
@@ -25,13 +27,34 @@
 			color: colors[rand4],
 			passengers: rand5,
 			convertible: convertible[rand6],
-			mileage: 0
+			mileage: 0,
+            engine: engine
 		};
 		return car;
 	}
 
+	function makeEngine(){
+	  var cylinders = ["3", "4", "5", "6", "8", "10", "12"];
+	  var volume = ["1.6", "1.8", "2.0", "3.0", "3.7", "4.0", "5.0"];
+	  var fuelType = ["diesel", "petrol", "hybrid"];
+	  var torque = ["100nm", "190nm", "250nm", "320nm", "380nm", "440nm", "530nm"];
+
+      var rand1 = Math.floor(Math.random() * cylinders.length);
+      var rand2 = Math.floor(Math.random() * volume.length);
+      var rand3 = Math.floor(Math.random() * fuelType.length);
+      var rand4 = Math.floor(Math.random() * torque.length);
+
+      var engine = {
+        cylinders: cylinders[rand1],
+        volume: volume[rand2],
+        fuelType: fuelType[rand3],
+        torque: torque[rand4]
+      };
+      return engine;
+    }
+
 	function displayCar(car) {
-		console.log("Your new car is a " + car.year + " " + car.make + " " + car.model);
+		console.log("Your new car is a " + car.year + " " + car.make + " " + car.model + " with " + car.engine.cylinders + " cylinder " + car.engine.volume + " liter " + car.engine.fuelType + " " + car.engine.torque + " engine");
 	}
 
 	var carToSell = makeCar();
