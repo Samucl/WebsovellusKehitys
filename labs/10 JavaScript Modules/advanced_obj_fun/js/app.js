@@ -16,6 +16,7 @@
 	}
 
 	var todo = new Todo('todos-vanillajs');
+	const lib =  require('./library');
 
 	function setView() {
 		todo.controller.setView(document.location.hash);
