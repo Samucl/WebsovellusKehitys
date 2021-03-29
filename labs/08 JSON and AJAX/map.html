@@ -10,6 +10,13 @@
 		map.onmousemove = showCoords;
 		var mydiv = document.getElementById("mydiv");
 		mydiv.onclick = addtext;
+		var ul = document.createElement("UL");
+		document.body.appendChild(ul);
+		for (var i = 0; i < 4; i++){
+		    var li = document.createElement("LI");
+            ul.appendChild(li);
+            document.getElementsByTagName("LI")[i].innerHTML='<p>Some text</p>';
+        }
 	}
 	
 	function showCoords(eventObj) {

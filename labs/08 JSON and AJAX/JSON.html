@@ -15,6 +15,26 @@ var fido2 = {
 	breed: "Mixed",
 	weight: 38
 };
+
+window.onload = showCar;
+function showCar(){
+  var car = {
+    model: "Audi A6",
+    year: "2004",
+    engine: { displacement: "3.0l",
+      hp: "240hp"},
+    color: "black",
+  };
+  var jsonString = JSON.stringify(car);
+  var jsonDiv = document.createElement('div');
+  jsonDiv.innerHTML = '<p>' + jsonString + '</p>';
+  document.body.appendChild(jsonDiv);
+  var parsedObject = JSON.parse(jsonString);
+  var parsedDiv = document.createElement('div');
+  parsedDiv.innerHTML = '<p>' + parsedObject.color + " " + parsedObject.year + " " + parsedObject.model + " with " + parsedObject.engine.displacement + " " + parsedObject.engine.hp + " engine" + '</p>';
+  document.body.appendChild(parsedDiv);
+}
+
 var fidoString = JSON.stringify(fido2);
 console.log("We made a string from a dog! " + fidoString);
 

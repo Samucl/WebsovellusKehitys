@@ -29,9 +29,16 @@ function handleClick(e) {
 	alert("You clicked on " + target.id);
 }
 
+function alertonmouse(){
+  alert("hello");
+}
+
   </script>
 </head>
 <body>
 <span id="clickme">Click me!</span>
+<div>
+  <p onmouseover="alertonmouse()" style="width: 100px;">Some text</p>
+</div>
 </body>
 </html>
