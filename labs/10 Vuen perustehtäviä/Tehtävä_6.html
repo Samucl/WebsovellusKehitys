@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä_6</title>
+    <!-- kehitysversio, jossa hyödyllistä infoa konsolissa -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>Users</h1>
+    <input type="text" placeholder="" v-model="user">
+    <button v-on:click="add">Add User</button>
+    <button v-on:click="remove">Delete User</button>
+    <ul>
+        <li v-for="item in list" :key="item.user">
+            {{item.user}}
+        </li>
+    </ul>
+</div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            user: '',
+            list : [
+            ]
+        },
+        methods: {
+            add: function (){
+                if(this.user){
+                    this.list.push({user: this.user})
+                }
+            },
+            remove: function (){
+                this.list.pop();
+            }
+        }
+    })
+</script>
+</html>

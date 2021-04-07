@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä_3</title>
+    <!-- kehitysversio, jossa hyödyllistä infoa konsolissa -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="addSpeed">+</button>
+        <button v-on:click="subSpeed">-</button>
+        <button v-on:click="zeroSpeed">0</button>
+        <div id="playback-speed">Speed: {{speed}}</div>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            speed: 0
+        },
+        methods: {
+            addSpeed: function (){
+                this.speed += 1;
+            },
+            subSpeed: function (){
+                this.speed -= 1;
+            },
+            zeroSpeed: function (){
+                this.speed = 0;
+            },
+        }
+    })
+</script>
+</html>

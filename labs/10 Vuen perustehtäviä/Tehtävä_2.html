@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä_2</title>
+    <!-- kehitysversio, jossa hyödyllistä infoa konsolissa -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <span v-if="seen">Now you see me</span><br>
+        <button v-on:click="Vaihda">Näytä/Piilota</button>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            seen: true
+        },
+        methods: {
+            Vaihda: function () {
+                if(this.seen){
+                    this.seen = false;
+                }
+                else{
+                    this.seen = true;
+                }
+            }
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä_7</title>
+    <!-- kehitysversio, jossa hyödyllistä infoa konsolissa -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>Users</h1>
+    <input type="text" placeholder="" v-model="user">
+    <button v-on:click="add">Add User</button>
+    <ul>
+        <li v-for="(item, index) in list" :key="item.user">
+            {{item.user}} <button v-on:click="remove(index)">Delete</button>
+        </li>
+    </ul>
+</div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            user: '',
+            list : [
+            ]
+        },
+        methods: {
+            add: function (){
+                if(this.user){
+                    this.list.push({user: this.user})
+                }
+            },
+            remove: function (index){
+                this.list.splice(index, 1);
+            }
+        }
+    })
+</script>
+</html>

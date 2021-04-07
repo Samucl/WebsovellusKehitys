@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä_4</title>
+    <!-- kehitysversio, jossa hyödyllistä infoa konsolissa -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Todo</h1>
+        <input type="text" placeholder="Write something to do..." v-model="todo">
+        <button v-on:click="add">Add</button>
+        <ul>
+            <li v-for="item in list" :key="item.message">
+                {{item.message}}
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            todo: '',
+            list : [
+                //Oletusarvoiset alkiot
+                {message: 'Clean the house'},
+                {message: 'Make food'}
+            ]
+        },
+        methods: {
+            add: function (){
+                if(this.todo){
+                    this.list.push({message: this.todo})
+                }
+            }
+        }
+    })
+</script>
+</html>
