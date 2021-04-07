@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lomake-esimerkki</title>
+</head>
+<style>
+    input:invalid {
+        border: 2px dashed red;
+    }
+</style>
+<body>
+<form action = "http://127.0.0.1:8081/process_post" method = "POST">
+    First Name: <input type = "text" name = "first_name" pattern="[A-Z]{1}.+" title="Name should start with uppercase and be at least two characters long"> <br>
+    Last Name: <input type = "text" name = "last_name" pattern="[A-Z]{1}.+" title="Name should start with uppercase and be at least two characters long"><br>
+    email: <input type="email" name="email"><br>
+    age: <input type="number" name="age">
+    <input type = "submit" value = "Submit">
+</form>
+</body>
+</html>
